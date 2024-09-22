@@ -20,18 +20,18 @@ app.get('/api/users', (req, res) => {
   });
 
 
-//   app.put('/api/users/:id', (req, res) => {
-//     const userId = parseInt(req.params.id);
-//     const index = users.findIndex(u => u.id === userId);
+  app.put('/api/users/:id', (req, res) => {
+    const userId = parseInt(req.params.id);
+    const index = users.findIndex(u => u.id === userId);
     
-//     if (index !== -1) {
-//       users[index] = { id: userId, ...req.body };
-//       res.json(users[index]);
-//     } else {
-//       res.status(404).send('User not found');
+    if (index !== -1) {
+      users[index] = { id: userId, ...req.body };
+      res.json(users[index]);
+    } else {
+      res.status(404).send('User not found');
   
-//     }
-//   });
+    }
+  });
 
 
  
