@@ -9,9 +9,9 @@ let users = [
   { id: 2, name: 'Janifer', email: 'janifers@gmail.com' },
 ];
 
-// app.get('/api/users', (req, res) => {
-//     res.status(200).json(users);    
-//   });
+app.get('/api/users', (req, res) => {
+    res.status(200).json(users);    
+  });
 
 //     app.post('/api/users', (req, res) => {
 //     const newUser = { id: users.length + 1, ...req.body };
