@@ -19,7 +19,7 @@ app.get('/api/users', (req, res) => {
     res.status(201).json(newUser);
   });
 
-
+// PUT REQUEST WITH STATUS CODE 
   app.put('/api/users/:id', (req, res) => {
     const userId = parseInt(req.params.id);
     const index = users.findIndex(u => u.id === userId);
