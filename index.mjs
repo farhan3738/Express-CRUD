@@ -8,7 +8,7 @@ let users = [
   { id: 1, name: 'Ali', email: 'ali@gmail.com' },
   { id: 2, name: 'Janifer', email: 'janifers@gmail.com' },
 ];
-
+// GET REQUEST
 app.get('/api/users', (req, res) => {
     res.status(200).json(users);    
   });
