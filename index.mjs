@@ -34,7 +34,7 @@ app.get('/api/users', (req, res) => {
   });
 
 
- 
+ // DELETE REQUEST WITH STATUS CODE
   app.delete('/api/users/:id', (req, res) => {
     const userId = parseInt(req.params.id);
     const index = users.findIndex(u => u.id === userId);
