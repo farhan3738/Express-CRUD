@@ -13,11 +13,11 @@ app.get('/api/users', (req, res) => {
     res.status(200).json(users);    
   });
 
-//     app.post('/api/users', (req, res) => {
-//     const newUser = { id: users.length + 1, ...req.body };
-//     users.push(newUser);
-//     res.status(201).json(newUser);
-//   });
+    app.post('/api/users', (req, res) => {
+    const newUser = { id: users.length + 1, ...req.body };
+    users.push(newUser);
+    res.status(201).json(newUser);
+  });
 
 
 //   app.put('/api/users/:id', (req, res) => {
