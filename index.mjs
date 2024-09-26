@@ -18,27 +18,21 @@ app.get('/api/users', (req, res) => {
     users.push(newUser);
     res.status(201).json(newUser);
   });
-
 // PUT REQUEST WITH STATUS CODE 
   app.put('/api/users/:id', (req, res) => {
     const userId = parseInt(req.params.id);
     const index = users.findIndex(u => u.id === userId);
-    
     if (index !== -1) {
       users[index] = { id: userId, ...req.body };
       res.json(users[index]);
     } else {
       res.status(404).send('User not found');
-  
     }
   });
-
-
- // DELETE REQUEST WITH STATUS CODES
+// DELETE REQUEST WITH STATUS CODES
   app.delete('/api/users/:id', (req, res) => {
     const userId = parseInt(req.params.id);
     const index = users.findIndex(u => u.id === userId);
-    
     if (index !== -1) {
       users.splice(index, 1);
       res.json({ message: 'User deleted successfully' });
@@ -46,9 +40,6 @@ app.get('/api/users', (req, res) => {
       res.status(404).send('User not found');
     }
   });
-  
-
-
-app.listen(port, () => {
+  app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
